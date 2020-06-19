@@ -33,7 +33,7 @@ export default function Home(props) {
                 </li>
                 <li>
                     <Link href="/about">
-                        <a>About the project</a>
+                        <a>About</a>
                     </Link>
                 </li>
             </ul>

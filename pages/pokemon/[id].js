@@ -1,11 +1,9 @@
 import React from 'react';
 
 export default function Pokemon({ pokemon }) {
-    console.log(pokemon);
     return (
         <div>
-            Id: ...
-            <img src="???" alt="Pokemon image" />
+            <img src={pokemon.sprites.front_default} alt="Pokemon image" />
         </div>
     );
 }

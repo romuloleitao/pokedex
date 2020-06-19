@@ -16,6 +16,8 @@ export default function Pokemon({ pokemon }) {
                     </Link>
                 </li>
             </ul>
+
+            <h2>{pokemon.species.name}</h2>
             <img src={pokemon.sprites.front_default} alt="Pokemon image" />
         </div>
     )

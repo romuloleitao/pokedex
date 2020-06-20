@@ -1,20 +1,10 @@
-import Link from 'next/Link';
+import Layout from '../components/layout';
 
 function About() {
-    return (
-        <ul>
-            <li>
-                <Link href="/">
-                    <a>Home</a>
-                </Link>
-            </li>
-            <li>
-                <Link href="/about">
-                    <a>About</a>
-                </Link>
-            </li>
+    return (    
+        <Layout>
             <h1>This is a simple project with React and Next Js</h1>
-        </ul>
+        </Layout>
     )
 }
 

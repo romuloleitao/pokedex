@@ -1,25 +1,12 @@
 import React from 'react';
-import Link from 'next/Link';
+import Layout from '../../components/layout';
 
 export default function Pokemon({ pokemon }) {
     return (
-        <div>
-            <ul>
-                <li>
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/about">
-                        <a>About</a>
-                    </Link>
-                </li>
-            </ul>
-
-            <h2>{pokemon.species.name}</h2>
-            <img src={pokemon.sprites.front_default} alt="Pokemon image" />
-        </div>
+        <Layout>
+            <h1>{pokemon.species.name}</h1>     
+            <img src={pokemon.sprites.front_default} alt="Pokemon image" />      
+        </Layout>
     )
 }
 

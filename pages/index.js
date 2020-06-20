@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Layout from '../components/layout';
 
 export async function getStaticProps() {
     const pokemons = await fetch('https://pokeapi.co/api/v2/pokedex/2/')
@@ -22,21 +23,11 @@ export async function getStaticProps() {
 export default function Home(props) {
     const { pokemons } = props;
 
-    return (
+    return (       
         <div>
-            Pokédex - React with NextJs
-            <ul>
-                <li>
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/about">
-                        <a>About</a>
-                    </Link>
-                </li>
-            </ul>
+            <Layout>
+                <h1>Pokédex - React with NextJs</h1>
+            </Layout>
 
             <ul>
                 {pokemons.map((pokemon) => (

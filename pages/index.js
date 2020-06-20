@@ -24,22 +24,19 @@ export default function Home(props) {
     const { pokemons } = props;
 
     return (       
-        <div>
             <Layout>
                 <h1>Pokédex - React with NextJs</h1>
+                <ul>
+                    {pokemons.map((pokemon) => (
+                        <li key={pokemon.entry_number}>
+                            <Link href={`/pokemon/${pokemon.entry_number}`}>
+                                <a>
+                                    {pokemon.pokemon_species.name}
+                                </a>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
             </Layout>
-
-            <ul>
-                {pokemons.map((pokemon) => (
-                    <li key={pokemon.entry_number}>
-                        <Link href={`/pokemon/${pokemon.entry_number}`}>
-                            <a>
-                                {pokemon.pokemon_species.name}
-                            </a>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
     );
 }

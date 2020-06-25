@@ -24,18 +24,6 @@ export default ({ children, settings = {} }) => (
         padding: 0;
       }
 
-      .util__flex {
-        display: flex;
-      }
-
-      .util__flex-col {
-        flex: 0 0 auto;
-      }
-
-      .util__flex-eq {
-        flex: 1;
-      }
-
       .util__container {
         max-width: 75rem;
         margin-left: auto;
@@ -43,16 +31,6 @@ export default ({ children, settings = {} }) => (
         padding-left: 20px;
         padding-right: 20px;
         box-sizing: border-box;
-      }
-
-      #nprogress .bar {
-        background: #29d;
-        position: fixed;
-        z-index: 1031;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
       }
     `}</style>
   </div>
